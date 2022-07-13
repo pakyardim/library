@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="book.png">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <title>Library</title>
+</head>
+
+<body>
+  <div class="grid-container">
+
+    <header>
+      <h1>Emirhan's Library</h1>
+      <a class="btn" href="mailto:emirhanpakyardim@gmail.com">CONTACT</a>
+    </header>
+
+    <div class="menu">
+
+      <div class="menu-elements1">
+        <div class="up">
+          <h2 class="bookNumTxt">Books currently in the Library:</h2>
+          <h1 class="bookNum">0</h1>
+
+        </div>
+
+
+        <div class="buttons">
+          <button type="button" name="button" class="addBook">Add New Book</button>
+          <button type="button" name="button" class="removeAll">Remove All</button>
+        </div>
+
+      </div>
+
+      <div class="add-newBook">
+        <h1>Add a new Book</h1>
+
+        <form id="survey-form">
+          <fieldset>
+            <label id="title-label">Please type in the book title
+              <input placeholder="The Outsider" type="text" id="title" required />
+            </label>
+            <label id="email-label">
+              Please type author's name
+              <input placeholder="Albert Camus" type="text" id="author" required /></label>
+            <label id="number-label">
+              Please type in number of pages
+              <input placeholder="111" type="number" id="number" min="1" max="99999" /></label>
+              <label>
+                <input type="checkbox" name="terms" class="inline" value="1" id="check"/>I've read it
+              </label>
+          </fieldset>
+          <input type="submit" id="submit" value="Submit">
+          <input type="button" id="back" value="Back">
+        </form>
+
+
+      </div>
+    </div>
+    <main>
+      <div class="cards">
+      </div>
+    </main>
+
+    <footer>
+      <p>Created by Emirhan</p> <a href="https://github.com/pakyardim" target="_blank">
+        <i class='fa fa-github'></i></a>
+    </footer>
+  </div>
+  <script src="app.js">
+  </script>
+</body>
+
+</html>
