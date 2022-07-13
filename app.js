@@ -84,11 +84,15 @@ const createCard = (book) => {
       readBtn.classList.remove("btnRead");
       readBtn.classList.add("btnNotRead");
       readBtn.textContent = "Not read";
+      book.read = false;
+      save();
     }
     else{
       readBtn.classList.remove("btnNotRead");
       readBtn.classList.add("btnRead");
       readBtn.textContent = "Read";
+      book.read = true;
+      save();
     }
   });
 
