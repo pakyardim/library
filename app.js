@@ -1,16 +1,11 @@
 let myLibrary = [];
 let numOfBooks = 0;
 
-class Book {
-  constructor(title = "unknown", author = "unknown", pages = "0", read = false) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-    numOfBooks++;
-    bookNum.textContent = numOfBooks;
-  }
-}
+const Book = (title = "unknown", author = "unknown", pages = "0", read = false)  => {
+  numOfBooks++;
+  bookNum.textContent = numOfBooks;
+  return {title, author, pages, read};
+};
 
 const menuElements = document.querySelector(".menu-elements1");
 const menuNewBook = document.querySelector(".add-newBook");
@@ -24,7 +19,7 @@ const getBook = () => {
   const author = document.querySelector("#author").value;
   const pages = document.querySelector("#number").value;
   const read = document.querySelector("#check").checked;
-  return new Book(title, author, pages, read);
+  return Book(title, author, pages, read);
 }
 
 const addBook = () => {
@@ -160,5 +155,5 @@ const load = () => {
 }
 
 const JSONToBook = (book) => {
-  return new Book(book.title, book.author, book.pages, book.read);
+  return Book(book.title, book.author, book.pages, book.read);
 }
